@@ -1,0 +1,21 @@
+type Query {
+    helloAlumnos: String!
+    listUsers(status: Status): [User]
+    listCurso: [Curso ]
+}       
+
+type Curso {
+    name: String!
+    students: [User]!
+}
+
+type User {
+    name: String!
+    email: String!
+    status: Status!
+}
+
+enum Status {
+    APROBADO
+    DESAPROBADO
+}
